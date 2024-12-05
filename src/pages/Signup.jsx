@@ -30,6 +30,7 @@ export function Signup( props ) {
                                 required
                             />
                         </Form.Group>
+                        <div style={{margin: '1rem'}}></div>
                         <Button variant="primary" type="submit">
                             Sign up
                         </Button>
