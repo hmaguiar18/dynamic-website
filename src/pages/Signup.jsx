@@ -5,15 +5,26 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 export function Signup( props ) {
-    document.title = "Sign up for an account"
+    document.title = "Sign up"
     return(
         <Container>
             <Row>
                 <Col md={{ span: 4, offset:4 }}>
                     <Form>
                         <h2>Sign up</h2>
+                        
                         <Form.Group>
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control 
+                                name="username"
+                                type="username"
+                                placeholder="Username"
+                                required
+                            />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Email</Form.Label>
                             <Form.Control 
                                 name="email"
                                 type="email"
@@ -21,6 +32,38 @@ export function Signup( props ) {
                                 required
                             />
                         </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control 
+                                name="name"
+                                type="name"
+                                placeholder="First name"
+                                required
+                            />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Last Name</Form.Label>
+                            <Form.Control 
+                                name="name"
+                                type="name"
+                                placeholder="Last Name"
+                                required
+                            />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Address</Form.Label>
+                            <Form.Control 
+                                name="address"
+                                type="address"
+                                placeholder="Your full address"
+                                required
+                            />
+                        </Form.Group>
+                        
+
                         <Form.Group>
                             <Form.Label>Password</Form.Label>
                             <Form.Control 
@@ -30,10 +73,26 @@ export function Signup( props ) {
                                 required
                             />
                         </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control 
+                                name="password"
+                                type="password"
+                                placeholder="minimum 8 characters"
+                                required
+                            />
+                        </Form.Group>
                         <div style={{margin: '1rem'}}></div>
+                        <Row>
                         <Button variant="primary" type="submit">
                             Sign up
                         </Button>
+                        <div style={{margin: '2px'}}></div>
+                        <Button variant="secondary" type="reset">
+                            Reset
+                        </Button>
+                        </Row>
                     </Form>
                 </Col>
             </Row>

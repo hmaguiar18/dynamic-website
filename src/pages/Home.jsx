@@ -27,7 +27,7 @@ export function Home( props ) {
                     {products.map((p) => (
                         <ProductCard name={p.Name} description={p.Description} pic={p.Pic} price={p.Price}></ProductCard>
                     ))}
-            </Row>
+             </Row>
         </Container>
     )
 }
